@@ -1,0 +1,515 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+MAIN COLOR: #087f5b
+GREY COLOR: #343a40
+*/
+
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  /* You need this to remove the unnecessary part of the transition */
+  overflow-x: hidden;
+}
+
+.main-container {
+  width: 96rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+header,
+section {
+  margin-bottom: 9.6rem;
+}
+
+h2 {
+  margin-bottom: 4.8rem;
+  font-size: 3.6rem;
+  letter-spacing: -0.5px;
+}
+
+.grid-3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+}
+
+.btn:link,
+.btn:visited {
+  background-color: #087f5b;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 70%;
+  text-align: center;
+
+  display: inline-block;
+  border-radius: 100px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #099268;
+}
+
+.btn--big {
+  font-size: 1.8rem;
+  padding: 1.6rem 3.2rem;
+}
+
+.btn--small {
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+}
+
+img {
+  border-radius: 12px;
+}
+
+.header,
+.footer {
+  padding: 4rem 9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ebfbee;
+  color: #495057;
+}
+
+/* ------------------------ */
+/* COMPONENT STYLES */
+/* ------------------------ */
+
+/* HEADER */
+
+.header {
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  height: 3rem;
+}
+
+.logo-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.main-nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 4.8rem;
+}
+
+.main-nav-list li {
+  list-style-type: none;
+}
+
+.main-nav-list a:link,
+a:visited {
+  text-decoration: none;
+  color: #343a40;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.main-nav-list a:hover,
+a:active {
+  color: #099268;
+}
+
+/* Mobile */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #343a40;
+}
+
+.icon-mobile-nav[name="close"] {
+  display: none;
+}
+
+/* HERO-SECTION */
+
+.hero-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8rem;
+  margin-top: 6.4rem;
+}
+
+.hero-text-box {
+  align-self: center;
+}
+
+h1 {
+  margin-bottom: 3.2rem;
+  font-size: 4.4rem;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  /* 44 / 52 / 62 */
+
+  /* text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); */
+}
+
+.hero-text {
+  margin-bottom: 2.4rem;
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+img {
+  width: 100%;
+}
+
+/* FEATURES */
+
+.features-icon {
+  stroke: #087f5b;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.features-title {
+  margin-bottom: 1.6rem;
+  font-size: 2rem;
+}
+
+.features-text {
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+/* TESTIMONIAL */
+
+.testimonial-section {
+  background-color: #ebfbee;
+  color: #343a40;
+  padding: 2.4rem;
+  border-radius: 12px;
+  margin-bottom: 4.8rem;
+}
+
+.testimonial-box {
+  grid-column: 2 / -1;
+  align-self: center;
+}
+
+.testimonial-box-2 {
+  grid-column: 1 / 3;
+  align-self: center;
+}
+
+.heading-testimonials {
+  margin-bottom: 2.4rem;
+  /* 20 / 24 / 30 */
+  font-size: 2.4rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 2.4rem;
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.testimonial-author {
+  color: #868e96;
+  font-size: 1.4rem;
+}
+
+/* CHAIRS */
+
+.chair {
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+}
+
+.chair img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.chair-box {
+  padding: 3.2rem;
+}
+
+h3 {
+  margin-bottom: 2.4rem;
+  font-size: 2rem;
+}
+
+.chair-details {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-bottom: 4.8rem;
+}
+
+.chair-details li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.chair-details li:last-child {
+  margin-bottom: 0;
+}
+
+.chair-icon {
+  stroke: #087f5b;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.chair-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+
+/* GALLERY */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+/* FAQ */
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+}
+
+details > summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 2.4rem;
+  row-gap: 3.2rem;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  padding: 2.4rem;
+}
+
+.text {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+.number {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #adb5bd;
+  margin-right: 0.5rem;
+}
+
+.hidden-text {
+  font-size: 1.4rem;
+}
+
+details[open] .number {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #099268;
+}
+
+details[open] .text {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #099268;
+}
+
+details[open] {
+  border-top: 0.4rem solid green;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  stroke: #099268;
+}
+.hidden-box {
+  grid-column: 2;
+  margin-top: 3rem;
+}
+
+.hidden-text {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.hidden-points {
+  font-size: 1.4rem;
+  color: #868e96;
+  margin-left: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* FORM */
+
+.form {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  column-gap: 3rem;
+  color: #343a40;
+  font-weight: 700;
+  background-color: #087f5b;
+  padding: 4rem;
+  border-radius: 9px;
+  box-shadow: 0 0 32px rgb(0 0 0 / 10%);
+}
+
+.form-img {
+  background-image: url("business-woman.jpg");
+  background-size: contain;
+  background-position: center;
+  border-radius: 9px;
+}
+
+.form-request {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.form-text {
+  color: #ebfbee;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+.form-text span {
+  border-bottom: 0.2rem solid #ff5601;
+}
+
+.form label {
+  display: block;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.form input {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  height: 4rem;
+  border-radius: 9px;
+  border: none;
+  padding: 1rem;
+  background-color: #ebfbee;
+  margin-bottom: 20px;
+}
+
+.form textarea {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  border-radius: 9px;
+  background-color: #ebfbee;
+  padding: 1rem;
+  resize: none;
+  margin-bottom: 2rem;
+}
+
+.form-fields {
+  display: grid;
+  row-gap: 2.4rem;
+  align-self: center;
+  justify-self: center;
+}
+
+.btn--form {
+  background-color: #fa5252;
+  color: #fff;
+  align-self: end;
+  padding: 1.2rem;
+  border-radius: 100px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn--form:hover,
+.btn--form:visited {
+  background-color: #f96767;
+  color: #fff;
+}
+
+/* FOOTER */
+
+.footer {
+  width: 100%;
+  font-size: 1.4rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 4.8rem;
+}
+
+.social-icon {
+  color: #343a40;
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.social-icon:hover {
+  color: #087f5b;
+}
